@@ -1,0 +1,26 @@
+Circuit Pro Industries M0 DC Closed Loop Servo
+
+   read a rotary encoder with interrupts
+   Encoder hooked up with common to GROUND,
+   encoder0PinA to pin 2, encoder0PinB to pin 4 (or pin 3 see below)
+   it doesn't matter which encoder pin you use for A or B 
+   
+   is possible to change PID costants by sending on SerialUSB interfaces the values separated by ',' in this order: KP,KD,KI
+   example: 5.2,3.1,0 so we have  KP=5.2 KD=3.1 KI=0 is only for testing purposes, but i will leave this function with eeprom storage
+
+*/ 
+/*   -----------------To Do-----------------
+ *    Add code to decifer V1 board from V2 Board
+ *    Implement code emulated EEPROM for V1 Board
+ *    Implement code for physical EEPROM for V2 Board (Chip:24LC256 ADDRESS:0x50) (32Kb Storage) (I2c on SDA and SCL)
+ *    PID Auto Tune
+ *    Error Reporting
+ *    Force sensing
+ *    Host Communincation
+ *    Performance Reporting and Info for Osiliscope
+ *    Switchless Homing(force sensing)
+ *    Master and Slave Mirroring
+ *    Configurable Limits
+ *    Create Host Software
+ *    
+*/
