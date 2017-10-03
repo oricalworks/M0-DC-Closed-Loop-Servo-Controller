@@ -1,10 +1,4 @@
-/* Use with LMD18245 motor controller, 
-  
-
-  
-   for motor controll you can choose different type of H-bridge, i have used LMD18245,
-   you can order 3 of it on ti.com sample request, the hardware needed is explained on the datasheet but i'm drowing
-   the schematic and PCB layout on eagle.
+/*
    
    
    read a rotary encoder with interrupts
