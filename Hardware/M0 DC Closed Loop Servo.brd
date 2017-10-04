@@ -172,6 +172,8 @@
 <hole x="1.143" y="42.9768" drill="1.5"/>
 <hole x="1.143" y="1.143" drill="1.5"/>
 <hole x="42.7482" y="1.143" drill="1.5"/>
+<rectangle x1="9.8298" y1="0.9144" x2="13.0302" y2="5.9436" layer="16"/>
+<rectangle x1="9.8298" y1="6.4008" x2="13.0302" y2="11.43" layer="16"/>
 </plain>
 <libraries>
 <library name="microbuilder">
@@ -2659,6 +2661,30 @@ design rules under a new name.</description>
 <wire x1="24.5999" y1="16.0147" x2="24.6244" y2="16.002" width="0.127" layer="1"/>
 <via x="32.0294" y="12.7127" extent="1-16" drill="0.6096"/>
 <via x="23.2791" y="17.3355" extent="1-16" drill="0.6096"/>
+</signal>
+<signal name="N$19">
+<via x="11.43" y="5.2578" extent="1-16" drill="0.6"/>
+</signal>
+<signal name="N$21">
+<via x="12.1158" y="8.9154" extent="1-16" drill="0.6"/>
+</signal>
+<signal name="N$22">
+<via x="10.7442" y="8.9154" extent="1-16" drill="0.6"/>
+</signal>
+<signal name="N$23">
+<via x="11.43" y="7.0866" extent="1-16" drill="0.6"/>
+</signal>
+<signal name="N$24">
+<via x="11.43" y="10.7442" extent="1-16" drill="0.6"/>
+</signal>
+<signal name="N$25">
+<via x="12.1158" y="3.429" extent="1-16" drill="0.6"/>
+</signal>
+<signal name="N$26">
+<via x="10.7442" y="3.429" extent="1-16" drill="0.6"/>
+</signal>
+<signal name="N$27">
+<via x="11.43" y="1.6002" extent="1-16" drill="0.6"/>
 </signal>
 </signals>
 </board>
