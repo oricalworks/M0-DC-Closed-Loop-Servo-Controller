@@ -30,18 +30,14 @@
 #define encoder0PinA  2
 #define encoder0PinB  4
 
-#define SpeedPin     5
-#define DirectionPin 6
+#define SpeedPin     9
+#define DirectionPin 8
 
-//Signal to Stepper Driver.(Emulates a stepper / stepper driver)
-#define STEP_PIN              7
-#define DIR_PIN               8
-#define ENABLE_PIN            9
-int COM = 0; // flash commit WARNING Limited Ammount of FLASH Writes.
+//Step & Dir Interface 
+#define STEP_PIN              3
+#define DIR_PIN               12
+#define ENABLE_PIN            13
 
-int addrKP = 0;
-int addrKI = 1;
-int addrKD = 2;
 
 volatile long encoder0Pos = 0;
 
@@ -54,7 +50,6 @@ float KP = 6.0 ; //position multiplier (gain) 2.25
 float KI = 0.1; // Intergral multiplier (gain) .25
 float KD = 1.3; // derivative multiplier (gain) 1.0
 
- 
 int lastError = 0;
 int sumError = 0;
 
@@ -86,8 +81,8 @@ void setup() {
   attachInterrupt(2, doEncoderMotor0, CHANGE);  // encoder pin on interrupt 0 - pin 2
   attachInterrupt(3, countStep, RISING);  //on pin 3
   
-  SerialUSB.println("start");                // a personal quirk
-  SerialUSB.println("WARNING limited number of PID flashes availible ONLY commit changes when happy with PID performance! (roughly 800 cycles per board)");
+  SerialUSB.println("start");               
+
 } 
 
 void loop(){
@@ -96,15 +91,11 @@ void loop(){
     KP = SerialUSB.read();
     KD = SerialUSB.read();
     KI = SerialUSB.read();
-   
+    
     
     SerialUSB.println(KP);
     SerialUSB.println(KD);
     SerialUSB.println(KI);
-  
-    
-    }
-    
 }
   
   if(millis() - previousTarget > 500){ //enable this code only for test purposes
