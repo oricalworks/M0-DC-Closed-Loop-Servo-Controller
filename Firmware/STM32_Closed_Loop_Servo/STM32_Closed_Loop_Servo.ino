@@ -11,10 +11,8 @@
 
 */ 
 /*   -----------------To Do-----------------
- *    Add code to decifer V1 board from V2 Board
- *    Implement code emulated EEPROM for V1 Board
  *    Implement code for physical EEPROM for V2 Board (Chip:24LC256 ADDRESS:0x50) (32Kb Storage) (I2c on SDA and SCL)
- *    PID Auto Tune
+ *    PID Auto-Tune
  *    Error Reporting
  *    Force sensing
  *    Host Communincation
