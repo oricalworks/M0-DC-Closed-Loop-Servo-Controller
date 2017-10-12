@@ -10,8 +10,8 @@ Circuit Pro Industries M0 DC Closed Loop Servo
 
 */ 
 /*   -----------------To Do-----------------
- *    Add code to decifer V1 board from V2 Board
- *    Implement code emulated EEPROM for V1 Board
+ *
+ *    Come up with offical name!!!!!
  *    Implement code for physical EEPROM for V2 Board (Chip:24LC256 ADDRESS:0x50) (32Kb Storage) (I2c on SDA and SCL)
  *    PID Auto Tune
  *    Error Reporting
@@ -22,5 +22,8 @@ Circuit Pro Industries M0 DC Closed Loop Servo
  *    Master and Slave Mirroring
  *    Configurable Limits
  *    Create Host Software
+ *    Implement Unit linking
+ *    Implement Wire communication (Serial I2C)
+ *    Complete data sheet and usage guide.
  *    
 */
