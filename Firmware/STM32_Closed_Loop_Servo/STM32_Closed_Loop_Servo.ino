@@ -78,7 +78,7 @@ void setup() {
 
   attachInterrupt(2, doEncoderMotor0, CHANGE);  // encoder pin on interrupt 0 - pin 2
   attachInterrupt(3, countStep, RISING);  //on pin 3
-  
+  SerialUSB.begin(15200);
   SerialUSB.println("start");               
 
 } 
