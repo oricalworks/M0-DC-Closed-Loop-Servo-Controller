@@ -8581,21 +8581,18 @@ Iq: 55uA</text>
 <wire x1="185.928" y1="-14.732" x2="185.928" y2="-17.272" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="GND"/>
 <pinref part="C2" gate="G$1" pin="-"/>
+<pinref part="U$2" gate="G$1" pin="GND"/>
 <wire x1="193.548" y1="-14.732" x2="193.548" y2="-17.272" width="0.1524" layer="91"/>
-<pinref part="NJM78L00UA" gate="G$1" pin="GND"/>
-<wire x1="223.52" y1="-7.62" x2="208.28" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="207.264" y1="-7.62" x2="198.12" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="198.12" y1="-7.62" x2="198.12" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="198.12" y1="-20.32" x2="193.548" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="193.548" y1="-20.32" x2="193.548" y2="-17.272" width="0.1524" layer="91"/>
-<junction x="193.548" y="-17.272"/>
 <pinref part="IN" gate="G$1" pin="2"/>
+<wire x1="207.264" y1="-2.032" x2="206.248" y2="-17.272" width="0.1524" layer="91"/>
+<wire x1="206.248" y1="-17.272" x2="193.548" y2="-17.272" width="0.1524" layer="91"/>
+<junction x="193.548" y="-17.272"/>
 <wire x1="207.264" y1="-2.54" x2="207.264" y2="-2.032" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="-7.62" x2="207.264" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="207.264" y1="-7.62" x2="207.264" y2="-2.032" width="0.1524" layer="91"/>
 <junction x="207.264" y="-2.032"/>
+<pinref part="NJM78L00UA" gate="G$1" pin="GND"/>
+<wire x1="223.52" y1="-7.62" x2="207.264" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="207.264" y1="-7.62" x2="207.264" y2="-2.032" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="PGND"/>
@@ -9459,6 +9456,8 @@ Iq: 55uA</text>
 <wire x1="193.548" y1="-2.032" x2="204.724" y2="-2.032" width="0.1524" layer="91"/>
 <junction x="193.548" y="-2.032"/>
 <pinref part="IN" gate="G$1" pin="1"/>
+<pinref part="NJM78L00UA" gate="G$1" pin="IN"/>
+<wire x1="223.52" y1="0" x2="204.724" y2="0" width="0.1524" layer="91"/>
 <wire x1="204.724" y1="0" x2="204.724" y2="-2.032" width="0.1524" layer="91"/>
 <junction x="204.724" y="-2.032"/>
 <label x="200.66" y="-5.08" size="1.778" layer="95"/>
@@ -9468,11 +9467,6 @@ Iq: 55uA</text>
 <pinref part="U2" gate="G$1" pin="VM"/>
 <wire x1="180.34" y1="-5.08" x2="147.828" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="147.828" y1="-5.08" x2="147.828" y2="-2.032" width="0.1524" layer="91"/>
-<pinref part="NJM78L00UA" gate="G$1" pin="IN"/>
-<wire x1="223.52" y1="0" x2="213.36" y2="0" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="0" x2="213.36" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="12.7" x2="204.724" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="204.724" y1="12.7" x2="204.724" y2="-2.032" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="155.448" y1="22.352" x2="150.368" y2="22.352" width="0.1524" layer="91"/>
