@@ -1,3 +1,5 @@
+
+
 /*
    
    
@@ -24,7 +26,31 @@
  *    
 */
 
+#include <SPI.h>
+#include <SD.h>
+// Set the pins used
+#define cardSelect 4
 
+File logfile;
+
+// blink out an error code
+void error(uint8_t errno) {
+  while(1) {
+    uint8_t i;
+    for (i=0; i<errno; i++) {
+      digitalWrite(13, HIGH);
+      delay(100);
+      digitalWrite(13, LOW);
+      delay(100);
+    }
+    for (i=errno; i<10; i++) {
+      delay(200);
+    }
+  }
+}
+
+
+//Hardware setup
 #define encoder0PinA  2
 #define encoder0PinB  4
 
@@ -35,7 +61,7 @@
 #define STEP_PIN              3
 #define DIR_PIN               12
 #define ENABLE_PIN            13
-
+// HS END
 
 volatile long encoder0Pos = 0;
 
@@ -65,6 +91,8 @@ bool oldStep = false;
 bool dir = false;
 
 void setup() { 
+  
+
 
   pinMode(encoder0PinA, INPUT); 
   pinMode(encoder0PinB, INPUT);  
