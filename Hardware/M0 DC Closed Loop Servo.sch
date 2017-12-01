@@ -5329,27 +5329,6 @@ Yageo CFR series &lt;a href="http://www.yageo.com/pdf/yageo/Leaded-R_CFR_2008.pd
 <text x="-7" y="7.5" size="0.8128" layer="25" font="vector" ratio="15">&gt;NAME</text>
 <text x="-7" y="-8.5" size="0.8128" layer="27" font="vector" ratio="15">&gt;VALUE</text>
 </package>
-<package name="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK">
-<description>Solder jumper, small, shorted with trace. No paste layer. Trace is cuttable.</description>
-<wire x1="0.8255" y1="-1.016" x2="-0.8255" y2="-1.016" width="0.2032" layer="21"/>
-<wire x1="0.8255" y1="1.016" x2="1.0795" y2="0.762" width="0.2032" layer="21" curve="-90"/>
-<wire x1="-1.0795" y1="0.762" x2="-0.8255" y2="1.016" width="0.2032" layer="21" curve="-90"/>
-<wire x1="-1.0795" y1="-0.762" x2="-0.8255" y2="-1.016" width="0.2032" layer="21" curve="90"/>
-<wire x1="0.8255" y1="-1.016" x2="1.0795" y2="-0.762" width="0.2032" layer="21" curve="90"/>
-<wire x1="-0.8255" y1="1.016" x2="0.8255" y2="1.016" width="0.2032" layer="21"/>
-<wire x1="-0.381" y1="0" x2="0.381" y2="0" width="0.2032" layer="1"/>
-<smd name="1" x="-0.508" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
-<smd name="2" x="0.508" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
-<text x="-0.9525" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
-<text x="-0.9525" y="-1.651" size="0.4064" layer="27">&gt;VALUE</text>
-</package>
-<package name="PAD-JUMPER-2-NC_BY_TRACE_NO_SILK">
-<wire x1="-0.381" y1="0" x2="0.381" y2="0" width="0.2032" layer="1"/>
-<smd name="1" x="-0.508" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
-<smd name="2" x="0.508" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
-<text x="0" y="0.889" size="0.4064" layer="25" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-0.889" size="0.4064" layer="27" align="top-center">&gt;VALUE</text>
-</package>
 </packages>
 <symbols>
 <symbol name="INDUCTOR">
@@ -5365,18 +5344,6 @@ Yageo CFR series &lt;a href="http://www.yageo.com/pdf/yageo/Leaded-R_CFR_2008.pd
 <text x="2.54" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="1" x="0" y="7.62" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
 <pin name="2" x="0" y="-7.62" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
-</symbol>
-<symbol name="PAD-JUMPER-2-NC_BY_TRACE">
-<wire x1="0.381" y1="0.635" x2="1.016" y2="0" width="1.27" layer="94" curve="-90" cap="flat"/>
-<wire x1="1.016" y1="0" x2="0.381" y2="-0.635" width="1.27" layer="94" curve="-90" cap="flat"/>
-<wire x1="-0.381" y1="-0.635" x2="-0.381" y2="0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
-<wire x1="2.54" y1="0" x2="1.651" y2="0" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="0" x2="-1.651" y2="0" width="0.1524" layer="94"/>
-<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
-<text x="-2.54" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
-<wire x1="-0.762" y1="0" x2="1.016" y2="0" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -5667,31 +5634,6 @@ INDUCTOR POWER 3.3UH 4.0A SMD&lt;br&gt;
 <technology name="">
 <attribute name="PROD_ID" value="NDUC-11157" constant="no"/>
 </technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="JUMPER-PAD-2-NC_BY_TRACE" prefix="SJ">
-<gates>
-<gate name="G$1" symbol="PAD-JUMPER-2-NC_BY_TRACE" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="NO_SILK" package="PAD-JUMPER-2-NC_BY_TRACE_NO_SILK">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -8219,7 +8161,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="D4" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603" value="Yellow"/>
 <part name="R8" library="SparkFun-Resistors" deviceset="330OHM1/10W1%(0603)" device="" value="330"/>
 <part name="SUPPLY16" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
-<part name="SJ1" library="SparkFun-Passives" deviceset="JUMPER-PAD-2-NC_BY_TRACE" device="NO_SILK" value="PWR-LED"/>
 <part name="S1" library="samd21-temp" deviceset="SWITCH-MOMENTARY-2" device="SMD-4.6X2.8MM" value="RESET"/>
 <part name="SUPPLY17" library="SparkFun-Aesthetics" deviceset="VIN" device=""/>
 <part name="SUPPLY18" library="SparkFun-Aesthetics" deviceset="VIN" device=""/>
@@ -8248,10 +8189,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="U$5" library="microbuilder" deviceset="GND" device=""/>
 <part name="OUT" library="SparkFun-Connectors" deviceset="CONN_02" device="PTH3"/>
 <part name="IN" library="SparkFun-Connectors" deviceset="CONN_02" device="PTH3"/>
-<part name="NJM78L00UA" library="AP1117Y33G-13" deviceset="AP1117Y33G-13" device=""/>
+<part name="NJM" library="AP1117Y33G-13" deviceset="AP1117Y33G-13" device="" value="NJM78L00UA"/>
 <part name="CN1" library="adafruit" deviceset="USB" device="MINIB"/>
 <part name="U2" library="microbuilder" deviceset="DRV8871" device="" value="DRV8871"/>
-<part name="U6" library="SparkFun-IC-Memory" deviceset="EEPROM-I2C" device="SMD" value="24LC256"/>
+<part name="U6" library="SparkFun-IC-Memory" deviceset="EEPROM-I2C" device="SMD" value="EEPROM-I2CSMD"/>
 <part name="R20" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" value="10k"/>
 <part name="R21" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" value="10k"/>
 <part name="ENCDAT" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
@@ -8341,7 +8282,7 @@ Iq: 55uA</text>
 <instance part="R2" gate="G$1" x="211.328" y="160.528" rot="R90"/>
 <instance part="R3" gate="G$1" x="160.528" y="160.528" rot="R90"/>
 <instance part="SUPPLY11" gate="G$1" x="211.328" y="168.148"/>
-<instance part="GND14" gate="1" x="211.328" y="127.508"/>
+<instance part="GND14" gate="1" x="211.328" y="137.668"/>
 <instance part="GND15" gate="1" x="160.528" y="127.508"/>
 <instance part="D3" gate="G$1" x="160.528" y="150.368"/>
 <instance part="SUPPLY12" gate="G$1" x="206.248" y="74.168" rot="MR0"/>
@@ -8372,7 +8313,6 @@ Iq: 55uA</text>
 <instance part="D4" gate="G$1" x="193.548" y="150.368"/>
 <instance part="R8" gate="G$1" x="193.548" y="160.528" rot="R90"/>
 <instance part="SUPPLY16" gate="G$1" x="193.548" y="168.148"/>
-<instance part="SJ1" gate="G$1" x="211.328" y="137.668" rot="MR90"/>
 <instance part="S1" gate="G$1" x="4.064" y="22.098" rot="MR0"/>
 <instance part="SUPPLY17" gate="G$1" x="43.688" y="150.368"/>
 <instance part="SUPPLY18" gate="G$1" x="81.788" y="137.668" rot="MR0"/>
@@ -8401,7 +8341,7 @@ Iq: 55uA</text>
 <instance part="U$5" gate="G$1" x="155.448" y="-19.812"/>
 <instance part="OUT" gate="G$1" x="196.088" y="15.24" rot="R270"/>
 <instance part="IN" gate="G$1" x="204.724" y="5.588" rot="R270"/>
-<instance part="NJM78L00UA" gate="G$1" x="228.6" y="-10.16"/>
+<instance part="NJM" gate="G$1" x="228.6" y="-10.16"/>
 <instance part="CN1" gate="G$1" x="7.62" y="162.56"/>
 <instance part="U2" gate="G$1" x="135.128" y="0.508"/>
 <instance part="U6" gate="G$1" x="243.84" y="40.64"/>
@@ -8547,8 +8487,7 @@ Iq: 55uA</text>
 </segment>
 <segment>
 <pinref part="GND14" gate="1" pin="GND"/>
-<pinref part="SJ1" gate="G$1" pin="1"/>
-<wire x1="211.328" y1="132.588" x2="211.328" y2="130.048" width="0.1524" layer="91"/>
+<wire x1="211.328" y1="145.288" x2="211.328" y2="140.208" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND17" gate="1" pin="GND"/>
@@ -8584,7 +8523,7 @@ Iq: 55uA</text>
 <pinref part="U$2" gate="G$1" pin="GND"/>
 <pinref part="C2" gate="G$1" pin="-"/>
 <wire x1="193.548" y1="-14.732" x2="193.548" y2="-17.272" width="0.1524" layer="91"/>
-<pinref part="NJM78L00UA" gate="G$1" pin="GND"/>
+<pinref part="NJM" gate="G$1" pin="GND"/>
 <wire x1="223.52" y1="-7.62" x2="208.28" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="207.264" y1="-7.62" x2="198.12" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="-7.62" x2="198.12" y2="-20.32" width="0.1524" layer="91"/>
@@ -8689,7 +8628,7 @@ Iq: 55uA</text>
 <wire x1="206.248" y1="74.168" x2="193.04" y2="74.168" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="74.168" x2="193.04" y2="27.94" width="0.1524" layer="91"/>
 <junction x="206.248" y="74.168"/>
-<pinref part="NJM78L00UA" gate="G$1" pin="OUT"/>
+<pinref part="NJM" gate="G$1" pin="OUT"/>
 <wire x1="193.04" y1="27.94" x2="246.38" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="246.38" y1="27.94" x2="246.38" y2="0" width="0.1524" layer="91"/>
 </segment>
@@ -9320,7 +9259,6 @@ Iq: 55uA</text>
 <net name="N$12" class="0">
 <segment>
 <pinref part="D2" gate="G$1" pin="C"/>
-<pinref part="SJ1" gate="G$1" pin="2"/>
 <wire x1="211.328" y1="142.748" x2="211.328" y2="145.288" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -9468,7 +9406,7 @@ Iq: 55uA</text>
 <pinref part="U2" gate="G$1" pin="VM"/>
 <wire x1="180.34" y1="-5.08" x2="147.828" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="147.828" y1="-5.08" x2="147.828" y2="-2.032" width="0.1524" layer="91"/>
-<pinref part="NJM78L00UA" gate="G$1" pin="IN"/>
+<pinref part="NJM" gate="G$1" pin="IN"/>
 <wire x1="223.52" y1="0" x2="213.36" y2="0" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="0" x2="213.36" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="12.7" x2="204.724" y2="12.7" width="0.1524" layer="91"/>
