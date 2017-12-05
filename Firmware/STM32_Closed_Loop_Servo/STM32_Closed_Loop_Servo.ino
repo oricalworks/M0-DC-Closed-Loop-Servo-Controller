@@ -2,6 +2,7 @@
 
 /*
    
+   https://github.com/JChristensen/extEEPROM - EEPROM LIBRARY
    
    read a rotary encoder with interrupts
    Encoder hooked up with common to GROUND,
@@ -26,28 +27,12 @@
  *    
 */
 
-#include <SPI.h>
-#include <SD.h>
 // Set the pins used
-#define cardSelect 4
 
-File logfile;
+
 
 // blink out an error code
-void error(uint8_t errno) {
-  while(1) {
-    uint8_t i;
-    for (i=0; i<errno; i++) {
-      digitalWrite(13, HIGH);
-      delay(100);
-      digitalWrite(13, LOW);
-      delay(100);
-    }
-    for (i=errno; i<10; i++) {
-      delay(200);
-    }
-  }
-}
+
 
 
 //Hardware setup
