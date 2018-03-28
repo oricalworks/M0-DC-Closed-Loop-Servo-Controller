@@ -37,7 +37,7 @@
 
 //Hardware setup
 #define encoder0PinA  2
-#define encoder0PinB  4
+#define encoder0PinB  3
 
 #define SpeedPin     9
 #define DirectionPin 8
@@ -79,8 +79,8 @@ void setup() {
   
 
 
-  pinMode(encoder0PinA, INPUT); 
-  pinMode(encoder0PinB, INPUT);  
+  pinMode(encoder0PinA, INPUT_PULLUP); 
+  pinMode(encoder0PinB, INPUT_PULLUP);  
   
   pinMode(DirectionPin, OUTPUT); 
   pinMode(SpeedPin, OUTPUT);
